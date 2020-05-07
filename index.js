@@ -7,7 +7,7 @@ class ProcessChangedChunksPlugin {
     apply(compiler) {
         // Called after emitting assets to output directory
         compiler.hooks.afterEmit.tap('AfterEmitPlugin', (compilation) => {
-            // Check which chunks (brands) have changed
+            // Check which chunks have changed
             const changedChunks = compilation.chunks.filter(chunk => {
                 const oldVersion = this.chunkVersions[chunk.name];
                 this.chunkVersions[chunk.name] = chunk.hash;
