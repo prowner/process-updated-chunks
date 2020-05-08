@@ -1,5 +1,5 @@
 
-class ProcessChangedChunksPlugin {
+class ProcessUpdatedChunksPlugin {
     constructor(processChunkCb) {
         this.processChunkCb = processChunkCb;
         this.chunkVersions = {};
@@ -19,4 +19,4 @@ class ProcessChangedChunksPlugin {
     }
 }
 
-module.exports = ProcessChangedChunksPlugin;
+module.exports = ProcessUpdatedChunksPlugin;
